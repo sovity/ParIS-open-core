@@ -1,0 +1,15 @@
+# intellij
+.idea
+**/*.iml
+.classpath
+.project
+.settings/
+**/.flattened-pom.xml
+
+# java backend
+target/
+**/*.jar
+
+# logs
+logs/
+
