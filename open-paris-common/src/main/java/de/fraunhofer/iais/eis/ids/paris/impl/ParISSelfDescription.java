@@ -35,8 +35,8 @@ public class ParISSelfDescription implements SelfDescriptionProvider {
     @Override
     public InfrastructureComponent getSelfDescription() {
         return new ParISBuilder(componentId)
-                ._title_(asList(new TypedLiteral("EIS ParIS", "en")))
-                ._description_(asList(new TypedLiteral("A Participant Information Service with a graph persistence layer", "en")))
+                ._title_(Util.asList(new TypedLiteral("EIS ParIS", "en")))
+                ._description_(Util.asList(new TypedLiteral("A Participant Information Service with a graph persistence layer", "en")))
                 ._maintainer_(maintainerId)
                 ._curator_(maintainerId)
                 ._inboundModelVersion_(Util.asList(modelVersion))

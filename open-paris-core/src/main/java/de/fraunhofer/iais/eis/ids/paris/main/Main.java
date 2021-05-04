@@ -21,7 +21,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.*;
+import java.util.Collection;
 
 /**
  * Entry point to the ParIS
@@ -111,7 +111,7 @@ public class Main extends MainTemplate implements ComponentInteractorProvider {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(de.fraunhofer.iais.eis.ids.paris.main.Main.class, args);
+        SpringApplication.run(Main.class, args);
     }
 
     @Override

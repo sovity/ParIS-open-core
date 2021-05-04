@@ -1,12 +1,13 @@
 package de.fraunhofer.iais.eis.ids.paris.main;
 
-import de.fraunhofer.iais.eis.ids.component.core.*;
+import de.fraunhofer.iais.eis.ids.component.core.DefaultComponent;
+import de.fraunhofer.iais.eis.ids.component.core.RequestType;
+import de.fraunhofer.iais.eis.ids.component.core.SelfDescriptionProvider;
 import de.fraunhofer.iais.eis.ids.component.ecosystemintegration.daps.DapsSecurityTokenVerifier;
 import de.fraunhofer.iais.eis.ids.component.ecosystemintegration.daps.JWKSFromIssuer;
 import de.fraunhofer.iais.eis.ids.component.interaction.multipart.MultipartComponentInteractor;
 import de.fraunhofer.iais.eis.ids.component.interaction.validation.ShaclValidator;
 import de.fraunhofer.iais.eis.ids.connector.commons.broker.QueryHandler;
-import de.fraunhofer.iais.eis.ids.component.core.DefaultComponent;
 import de.fraunhofer.iais.eis.ids.index.common.main.AppConfigTemplate;
 import de.fraunhofer.iais.eis.ids.index.common.persistence.*;
 import de.fraunhofer.iais.eis.ids.paris.persistence.ParticipantPersistenceAndIndexing;
