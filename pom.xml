@@ -63,5 +63,28 @@
         </repository>
     </repositories>
 
+    <dependencies>
+        <dependency>
+            <groupId>de.fraunhofer.iais.eis.ids.infomodel</groupId>
+            <artifactId>java</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.fraunhofer.iais.eis.ids</groupId>
+            <artifactId>open-index-common</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.fraunhofer.iais.eis.ids</groupId>
+            <artifactId>core</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.8.0-beta4</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

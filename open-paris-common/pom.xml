@@ -13,28 +13,20 @@
 
     <packaging>jar</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>de.fraunhofer.iais.eis.ids.infomodel</groupId>
-            <artifactId>java</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>de.fraunhofer.iais.eis.ids</groupId>
-            <artifactId>open-index-common</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>de.fraunhofer.iais.eis.ids</groupId>
-            <artifactId>core</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.8.0-beta4</version>
-        </dependency>
-    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <release>11</release>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 
 
 
