@@ -28,12 +28,16 @@ public class ParticipantPersistenceAndIndexing extends ParticipantPersistenceAda
     private final ParticipantModelCreator participantModelCreator = new ParticipantModelCreator();
     private final Logger logger = LoggerFactory.getLogger(ParticipantPersistenceAndIndexing.class);
 
+    //TODO: Use this to rewrite URIs
+    private final URI componentCatalogUri;
+
     /**
      * Constructor
      * @param repositoryFacade repository (triple store) to which the modifications should be stored
      */
-    public ParticipantPersistenceAndIndexing(RepositoryFacade repositoryFacade) {
+    public ParticipantPersistenceAndIndexing(RepositoryFacade repositoryFacade, URI componentCatalogUri) {
         this.repositoryFacade = repositoryFacade;
+        this.componentCatalogUri = componentCatalogUri;
         Date date=new Date();
         Timer timer = new Timer();
 

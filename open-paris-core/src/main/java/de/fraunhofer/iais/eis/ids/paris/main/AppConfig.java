@@ -46,7 +46,7 @@ public class AppConfig extends AppConfigTemplate {
         RepositoryFacade repositoryFacade = new RepositoryFacade(sparqlEndpointUrl);
 
         ParticipantPersistenceAndIndexing participantPersistence = new ParticipantPersistenceAndIndexing(
-                repositoryFacade);
+                repositoryFacade, catalogUri);
         participantPersistence.setIndexing(new NullIndexing());
         if (contextDocumentUrl != null && !contextDocumentUrl.isEmpty()) {
             participantPersistence.setContextDocumentUrl(contextDocumentUrl);
