@@ -10,6 +10,7 @@ General information about the necessity of the ParIS, the technical workflow and
 details about the data model used, can be found in the [IDS-G](https://github.com/International-Data-Spaces-Association/IDS-G/tree/feature/paris/core/ParIS#data-model-participant-and-participant-attributes).
 
 ##Purpose
+
 The goal of this implementation is to show how the concepts introduced in the Handshake Document can be turned into an
 actual application. It, therefore, demonstrates the usage of the IDS Information Model for core communication tasks.
 More specifically, it shows:
@@ -19,6 +20,7 @@ More specifically, it shows:
 Security is currently supported in terms of TLS via a reverse proxy.
 
 ##Repository Structure
+
 [open-paris-core](open-paris-core): The main Maven Artifact to start with.
 
 [open-paris-common](open-paris-common): Core functionality specific to ParIS. Note that core functionality, which is more general
@@ -27,6 +29,7 @@ to any IDS indexing service, can be found in the open-index-common module of the
 [docker](docker): Docker and DockerCompose files to deploy the IDS ParIS.
 
 ##Running the ParIS
+
 The steps for bringing up a ParIS instance depend on the host where the ParIS should be deployed. The easiest option is
 to run the instance on localhost, which is described in the following. We assume that the Docker command-line tools are
 installed on your system.
@@ -70,6 +73,7 @@ Build the Docker Images, Prepare and Check the Docker Compose File:
 * [Apache Jena](https://jena.apache.org/documentation/) - Parsing and serializing RDF and Fuseki as triple store for meta data
 
 ##Developers
+
 The core development and architecture is driven by
 - [Matthias Böckmann](https://github.com/maboeckmann), [Fraunhofer IAIS](https://www.iais.fraunhofer.de/)
 - [Stefanie Koslowski](https://github.com/stefkoslowski), [Fraunhofer IAIS](https://www.iais.fraunhofer.de/)
@@ -78,4 +82,5 @@ with significant contributions, comments, and support by
 - [Sebastian Bader](https://github.com/sebbader/), [Fraunhofer IAIS](https://www.iais.fraunhofer.de/)
 
 ##Contact
+
 [contact@ids.fraunhofer.de](mailto:contact@ids.fraunhofer.de)
