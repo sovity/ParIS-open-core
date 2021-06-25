@@ -1,9 +1,9 @@
 FROM adoptopenjdk/openjdk11:alpine-slim
 
-ADD participant-information-service-open-core-*.jar participant-information-service-open-core.jar
+ADD open-paris-core-*.jar open-paris-core.jar
 ADD run.sh run.sh
 
-RUN sh -c 'touch /participant-information-service-open-core.jar'
+RUN sh -c 'touch /open-paris-core.jar'
 RUN sh -c 'chmod +x /run.sh'
 
 ADD daps.crt $JAVA_HOME/lib/security

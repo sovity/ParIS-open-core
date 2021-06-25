@@ -41,4 +41,4 @@ ARGS="${ARGS} -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005
 
 echo "ARGS=${ARGS}"
 
-exec java ${ARGS} -jar /participant-information-service-open-core.jar
+exec java ${ARGS} -jar /open-paris-core.jar
