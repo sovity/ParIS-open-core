@@ -20,6 +20,7 @@ services:
     - ELASTICSEARCH_HOSTNAME=paris-elasticsearch
     - SHACL_VALIDATION=true
     - DAPS_VALIDATE_INCOMING=true
+    - SSL_JAVAKEYSTORE=isstbroker-keystore.jks
     - COMPONENT_URI=https://localhost/
     - COMPONENT_CATALOGURI=https://localhost/catalog/
     expose:
