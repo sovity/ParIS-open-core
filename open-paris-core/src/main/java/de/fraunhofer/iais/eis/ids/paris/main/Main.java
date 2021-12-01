@@ -19,6 +19,7 @@ import org.springframework.core.env.Environment;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.io.FileInputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
@@ -58,6 +59,10 @@ public class Main extends MainTemplate implements ComponentInteractorProvider {
     //Environment allows us to access application.properties
     @Autowired
     private Environment env;
+
+    public Main(FileInputStream javakeystore) {
+        super(javakeystore);
+    }
 
     @Override
     public SelfDescriptionProvider createSelfDescriptionProvider() throws URISyntaxException {
