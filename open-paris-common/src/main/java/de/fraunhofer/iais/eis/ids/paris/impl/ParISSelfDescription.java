@@ -37,12 +37,12 @@ public class ParISSelfDescription implements SelfDescriptionProvider {
         return new ParISBuilder(componentId)
                 ._title_(Util.asList(new TypedLiteral("EIS ParIS", "en")))
                 ._description_(Util.asList(new TypedLiteral("A Participant Information Service with a graph persistence layer", "en")))
-                ._maintainer_(maintainerId)
-                ._curator_(maintainerId)
+                ._maintainerAsUri_(maintainerId)
+                ._curatorAsUri_(maintainerId)
                 ._inboundModelVersion_(Util.asList(modelVersion))
                 ._outboundModelVersion_(modelVersion)
                 ._securityProfile_(SecurityProfile.BASE_SECURITY_PROFILE)
-                ._resourceCatalog_(Util.asList(new ResourceCatalogBuilder()._offeredResource_(Util.asList(new ResourceBuilder().build())).build())) //empty catalog
+                ._resourceCatalog_(Util.asList(new ResourceCatalogBuilder()._offeredResourceAsObject_(Util.asList(new ResourceBuilder().build())).build())) //empty catalog
                 ._hasDefaultEndpoint_(new ConnectorEndpointBuilder()._accessURL_(URI.create(componentId.toString() + "infrastructure")).build())
                 .build();
     }
