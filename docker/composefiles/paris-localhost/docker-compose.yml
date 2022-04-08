@@ -1,32 +1,32 @@
 version: '3'
 services:
   paris-reverseproxy:
-    image: registry.gitlab.cc-asp.fraunhofer.de:4567/eis-ids/paris-open/reverseproxy
+    image: registry.gitlab.cc-asp.fraunhofer.de/eis-ids/paris-open/reverseproxy:5.0.0-SNAPSHOT
     volumes:
-      #- /etc/idscert/localhost:/etc/cert/
-      - c:/etc/idscert/localhost:/etc/cert/
+      - /home/tmorbagalh/platoon-dev/certificate:/etc/cert/
+#      - c:/etc/idscert/localhost:/etc/cert/
     ports:
     - "443:443" # IDS-HTTP API
-    - "80:80"
 
   paris-core:
-    image: registry.gitlab.cc-asp.fraunhofer.de:4567/eis-ids/paris-open/core
+    image: registry.gitlab.cc-asp.fraunhofer.de/eis-ids/paris-open/core:5.0.0-JKS
     volumes:
-      #- /etc/idscert/localhost:/etc/cert/
-      - c:/etc/idscert/localhost:/etc/cert/
+      - /home/tmorbagalh/platoon-dev/certificate:/etc/cert/
+#      - c:/etc/idscert/localhost:/etc/cert/
     restart: always
     environment:
     - SPARQL_ENDPOINT=http://paris-fuseki:3030/connectorData
     - ELASTICSEARCH_HOSTNAME=paris-elasticsearch
     - SHACL_VALIDATION=true
-    - DAPS_VALIDATE_INCOMING=true
+    - DAPS_VALIDATE_INCOMING=false
+    - IDENTITY_JAVAKEYSTORE=/etc/cert/isstbroker-keystore.jks
     - COMPONENT_URI=https://localhost/
     - COMPONENT_CATALOGURI=https://localhost/catalog/
     expose:
     - "8080"
 
   paris-fuseki:
-    image: registry.gitlab.cc-asp.fraunhofer.de:4567/eis-ids/paris-open/fuseki
+    image: registry.gitlab.cc-asp.fraunhofer.de/eis-ids/paris-open/fuseki:5.0.0-SNAPSHOT
     volumes:
       - paris-fuseki:/fuseki
     expose:
