@@ -64,7 +64,7 @@ Build the Docker Images, Prepare and Check the Docker Compose File:
    to the directory where it is located and run ```docker-compose up```.
    
 4. __Interacting with the ParIS__: We maintain Postman collections illustrating interactions with the Broker and the ParIS.
-[This collection](https://www.getpostman.com/collections/d1e80e1f369ae2a8f492) illustrates IDS-REST interactions.
+[This collection](https://www.getpostman.com/collections/b9629312f1ccb2046986) illustrates multipart messages.
    
 ## Built With
 
